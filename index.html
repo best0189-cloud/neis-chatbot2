@@ -180,15 +180,13 @@ let history = [];
 let isLoading = false;
 
 window.addEventListener('DOMContentLoaded', () => {
-  if (API_KEY && API_KEY !== 'YOUR_API_KEY_HERE') {
-    ACTIVE_KEY = API_KEY;
-    document.getElementById('setup').style.display = 'none';
-    const chat = document.getElementById('chat');
-    chat.style.display = 'flex';
-    chat.style.flexDirection = 'column';
-    addBotMessage('안녕하세요! 저는 송림초등학교 나이스 플러스 체험학습 업무 도우미입니다 😊\n\n교외체험학습 신청·접수·보고서 처리, 권한 설정 등 나이스 관련 궁금한 사항을 편하게 질문해 주세요.');
-    setupInput();
-  }
+  ACTIVE_KEY = API_KEY;
+  document.getElementById('setup').style.display = 'none';
+  const chat = document.getElementById('chat');
+  chat.style.display = 'flex';
+  chat.style.flexDirection = 'column';
+  addBotMessage('안녕하세요! 저는 송림초등학교 나이스 플러스 체험학습 업무 도우미입니다 😊\n\n교외체험학습 신청·접수·보고서 처리, 권한 설정 등 나이스 관련 궁금한 사항을 편하게 질문해 주세요.');
+  setupInput();
 });
 
 function startChat() {
